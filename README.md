@@ -10,6 +10,17 @@ ScamShield is a Django security utility that analyzes pasted messages and URL st
 - JSON API under `/api/v1/`; health check at `/health/`.
 - CSRF protection, input limits, ORM-only persistence, production configuration, Docker support.
 
+## Live Demo Previews
+
+### 1. Risk Analysis Dashboard
+<!-- Drag and drop your dashboard screenshot here -->
+
+### 2. High-Risk Text Detection
+<!-- Drag and drop a screenshot of a scan result here -->
+
+### 3. URL Scanning 
+<!-- Drag and drop a screenshot of a URL scan result here -->
+
 ## Architecture
 
 `ScamAnalyzer` normalizes input, extracts features, applies deterministic text/URL rules, optionally blends model probability, then returns the risk result. Views do not fetch URLs. Authenticated results are stored as `Scan` and `DetectionSignal`; anonymous results are not persisted.
