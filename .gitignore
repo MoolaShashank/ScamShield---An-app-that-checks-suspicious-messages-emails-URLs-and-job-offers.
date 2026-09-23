@@ -1,0 +1,10 @@
+.venv/
+.venv-clean/
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+staticfiles/
+ml/models/*.joblib
+.pytest_cache/
+.coverage

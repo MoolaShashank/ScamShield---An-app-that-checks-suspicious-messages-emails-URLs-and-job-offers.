@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DEBUG: "False"
+      SECRET_KEY: change-me-in-a-real-deployment
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      DATABASE_URL: postgresql://scamshield:scamshield@postgres:5432/scamshield
+    depends_on: [postgres]
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: scamshield
+      POSTGRES_USER: scamshield
+      POSTGRES_PASSWORD: scamshield
+    volumes: [postgres_data:/var/lib/postgresql/data]
+volumes:
+  postgres_data:
