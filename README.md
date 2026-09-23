@@ -1,0 +1,1 @@
+# ScamShield---An-app-that-checks-suspicious-messages-emails-URLs-and-job-offers.
